@@ -23,11 +23,9 @@ func singleNumber(nums []int) int {
 		}
 	}
 
-	v := make([]int, 0, len(m))
 	for key := range m {
-		v = append(v, key)
+		return key
 	}
-	return v[0]
 }*/
 
 func main() {
