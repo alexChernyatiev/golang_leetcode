@@ -11,7 +11,7 @@ func singleNumber(nums []int) int {
 	return sum
 }
 
-//Solution with using Map time: O(n), memory: O(n)
+//Solution with using Map time: O(n), space: O(n)
 /*func singleNumber(nums []int) int {
 	m := make(map[int]int)
 	for i := 0; i < len(nums); i++ {
