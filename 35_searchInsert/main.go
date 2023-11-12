@@ -1,6 +1,7 @@
 package main
 
-func searchInsert(nums []int, target int) int {
+//Algorithm with new array
+/*func searchInsert(nums []int, target int) int {
 	arr := nums
 
 	plus := 0
@@ -27,6 +28,26 @@ func searchInsert(nums []int, target int) int {
 	}
 
 	return -1
+}*/
+
+//Algorithm with using pointers
+func searchInsert(nums []int, target int) int {
+	l, r := 0, len(nums)-1
+	for l <= r {
+		m := l + (r-l)/2
+
+		if nums[m] == target {
+			return m
+		}
+
+		if nums[m] > target {
+			r = m - 1
+		} else {
+			l = m + 1
+		}
+	}
+
+	return l
 }
 
 func main() {
